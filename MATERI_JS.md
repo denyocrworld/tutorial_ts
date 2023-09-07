@@ -129,17 +129,21 @@ Encapsulation adalah konsep mengemas data (properti) dan metode (fungsi) dalam s
 
 Contoh:
 ```javascript
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+class ClassWithPrivate {
+  #privateField;
+  #privateFieldWithInitializer = 42;
+
+  #privateMethod() {
+    // …
   }
-  getAge() {
-    return this.age;
+
+  static #privateStaticField;
+  static #privateStaticFieldWithInitializer = 42;
+
+  static #privateStaticMethod() {
+    // …
   }
 }
-let person = new Person("John", 30);
-console.log(person.getAge());
 ```
 
 ### 11. Polymorphism (Polimorfisme)
